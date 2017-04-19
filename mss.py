@@ -125,3 +125,4 @@ if __name__ == '__main__':
 	print(runtime(10, algorithm1))
 	print(runtime(10, algorithm2))
 	print(runtime(10, algorithm3))
+	
