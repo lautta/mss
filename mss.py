@@ -4,39 +4,39 @@ from timeit import default_timer as timer
 
 def algorithm1(array):
     n = len(array)
-    start = 0
-    end = 0
-    max = 0
+    sub_low = 0
+    sub_high = 0
+    max_sum = 0
 
     for i in range(n):
         for j in range(i, n):
             total = 0
             for k in range(i, j + 1):
                 total += array[k]
-                if total > max:
-                    max = total
-                    start = i
-                    end = j
+                if total > max_sum:
+                    max_sum = total
+                    sub_low = i
+                    sub_high = j
 
-    return max, array[start:end + 1]
+    return max_sum, array[sub_low:sub_high + 1]
 
 
 def algorithm2(array):
     n = len(array)
-    start = 0
-    end = 0
-    max = 0
+    sub_low = 0
+    sub_high = 0
+    max_sum = 0
 
     for i in range(n):
         total = 0
         for j in range(i, n):
             total += array[j]
-            if total > max:
-                max = total
-                start = i
-                end = j
+            if total > max_sum:
+                max_sum = total
+                sub_low = i
+                sub_high = j
 
-    return max, array[start:end + 1]
+    return max_sum, array[sub_low:sub_high + 1]
 
 
 def runtime(runs, function_type):
