@@ -132,11 +132,20 @@ def get_runtimes():
 
 
 def write_times(filename, array):
-    with open(filename, 'wb') as out:
-        file_writer = csv.writer(out)
+    with open(filename, 'wb') as output:
+        file_writer = csv.writer(output)
         for row in array:
             file_writer.writerow(row)
 
 
+def read_problems(filename):
+    problems = []
+    with open(filename, 'r') as input:
+        for line in input:
+            problem = [int(number) for number in line.strip().split()]
+            problems.append(problem)
+    return problems
+
 if __name__ == '__main__':
+    print(read_problems('MSS_Problems.txt'))
     get_runtimes()
