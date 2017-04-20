@@ -70,15 +70,15 @@ def maxPrefix(array, start, end):
     return (maxSum, value)
 
 
-# algorithm 3
+# divide and conquer
 # returns the max subarray sum, the start index of the subarray, and the ending index of the subarray
-def algorithm3(array, start, end):
+def d_and_c(array, start, end):
     if start == end:
         return (array[start], start, end)
 
     mid = (end + start) / 2
-    L_sum, L_start, L_end = algorithm3(array, start, mid)
-    R_sum, R_start, R_end = algorithm3(array, mid + 1, end)
+    L_sum, L_start, L_end = d_and_c(array, start, mid)
+    R_sum, R_start, R_end = d_and_c(array, mid + 1, end)
 
     suf_sum, suf_start = maxSuffix(array, start, mid)
     pref_sum, pref_end = maxPrefix(array, mid + 1, end)
@@ -94,27 +94,25 @@ def algorithm3(array, start, end):
         else:
             return ((suf_sum + pref_sum), suf_start, pref_end)
 
+# algorithm 3
+def algorithm3(array):
+    low = 0
+    high = len(array) - 1
+    (max_sum, sub_low, sub_high) = d_and_c(array, low, high)
 
-def runtime(runs, function_type, n_sizes):
+    return max_sum, array[sub_low:sub_high + 1]
+
+
+def runtime(runs, alg_type, n_sizes):
     times = []
     for i in range(len(n_sizes)):
         total = 0
         for j in range(runs):
             numbers = [random.randint(-50, 50) for k in range(n_sizes[i])]
-
-            # algorithm 3 requires 3 parameters
-            if function_type == algorithm3:
-                start = timer()
-                function_type(numbers, 0, len(numbers) - 1)
-                end = timer()
-                total += end - start
-
-            # algorithms 1 and 2 require 1 parameter
-            else:
-                start = timer()
-                function_type(numbers)
-                end = timer()
-                total += end - start
+            start = timer()
+            alg_type(numbers)
+            end = timer()
+            total += end - start
 
         average = total / runs
         times.append((n_sizes[i], average))
@@ -151,5 +149,8 @@ def read_problems(filename):
 
 
 if __name__ == '__main__':
-    print(read_problems('MSS_Problems.txt'))
+    read_problems('MSS_Problems.txt')
     get_runtimes()
+
+    test = [10, -11, -1, -9, 33, -45, 23, 24, -1, -7, -8, 19]
+    print(algorithm3(test))
