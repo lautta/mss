@@ -6,9 +6,7 @@ from timeit import default_timer as timer
 # algorithm 1
 def algorithm1(array):
     n = len(array)
-    sub_low = 0
-    sub_high = 0
-    max_sum = 0
+    sub_low = sub_high = max_sum = 0
 
     for i in range(n):
         for j in range(i, n):
@@ -26,9 +24,7 @@ def algorithm1(array):
 # algorithm 2
 def algorithm2(array):
     n = len(array)
-    sub_low = 0
-    sub_high = 0
-    max_sum = 0
+    sub_low = sub_high = max_sum = 0
 
     for i in range(n):
         total = 0
@@ -148,9 +144,22 @@ def read_problems(filename):
     return problems
 
 
-if __name__ == '__main__':
-    read_problems('MSS_Problems.txt')
-    get_runtimes()
+def write_results(filename, alg_func, alg_name, array, write_option):
+    with open(filename, write_option) as output:
+        output.write('Results for %s \n' % alg_name)
+        for input in array:
+            output.write('Initial Array: [' + ', '.join([str(i) for i in input]) + ']\n')
+            mss_results = alg_func(input)
+            output.write('Max Sum: %s \nMax Sum Subarray: %s \n\n' % mss_results)
+        output.write('\n\n')
 
-    test = [10, -11, -1, -9, 33, -45, 23, 24, -1, -7, -8, 19]
-    print(algorithm3(test))
+
+if __name__ == '__main__':
+    input_file = 'MSS_Problems.txt'
+    output_file = 'MSS_Results.txt'
+
+    read_arrays = read_problems(input_file)
+    write_results(output_file, algorithm1, 'Enumeration', read_arrays, 'wb')
+    write_results(output_file, algorithm2, 'Better Enumeration', read_arrays, 'ab')
+    write_results(output_file, algorithm3, 'Divide-And-Conquer', read_arrays, 'ab')
+    get_runtimes()
