@@ -130,6 +130,8 @@ def get_runtimes():
     write_times('alg2_times.csv', runtime(10, algorithm2, a2_n))
     write_times('alg3_times.csv', runtime(10, algorithm3, a3_n))
 
+    print('Wrote csv runtime files...')
+
 
 def write_times(filename, array):
     with open(filename, 'wb') as output:
@@ -144,7 +146,9 @@ def read_problems(filename):
         for line in input:
             problem = [int(number) for number in line.strip().split()]
             problems.append(problem)
+    print('Read ' + filename + ' file...')
     return problems
+
 
 if __name__ == '__main__':
     print(read_problems('MSS_Problems.txt'))
