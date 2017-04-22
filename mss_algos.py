@@ -92,3 +92,21 @@ def algorithm3(array):
     (max_sum, sub_low, sub_high) = d_and_c(array, low, high)
 
     return max_sum, array[sub_low:sub_high + 1]
+
+
+# Algorithm 4: Linear-time
+def algorithm4(array):
+    max = sum = 0
+    idxStart = idxEnd = 0
+
+    for i, val in enumerate(array):
+        sum += val
+
+        if sum < 0:
+            idxStart = i + 1
+            sum = 0
+        elif sum > max:
+            idxEnd = i + 1
+            max = sum
+            
+    return max, array[idxStart : idxEnd]

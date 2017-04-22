@@ -29,5 +29,6 @@ if __name__ == '__main__':
     write_results(output_file, algorithm1, 'Enumeration', read_arrays, 'wb')
     write_results(output_file, algorithm2, 'Better Enumeration', read_arrays, 'ab')
     write_results(output_file, algorithm3, 'Divide-And-Conquer', read_arrays, 'ab')
+    write_results(output_file, algorithm4, 'Linear-time', read_arrays, 'ab')
 
     print('Wrote %s file...' % output_file)

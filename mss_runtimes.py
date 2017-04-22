@@ -24,10 +24,12 @@ def get_runtimes():
     a1_n = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
     a2_n = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
     a3_n = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+    a4_n = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
 
-    write_times('alg1_times.csv', runtime(10, algorithm1, a1_n))
-    write_times('alg2_times.csv', runtime(10, algorithm2, a2_n))
-    write_times('alg3_times.csv', runtime(10, algorithm3, a3_n))
+    # write_times('alg1_times.csv', runtime(10, algorithm1, a1_n))
+    # write_times('alg2_times.csv', runtime(10, algorithm2, a2_n))
+    # write_times('alg3_times.csv', runtime(10, algorithm3, a3_n))
+    write_times('alg4_times.csv', runtime(10, algorithm4, a4_n))
 
     print('Wrote csv runtime files...')
 
