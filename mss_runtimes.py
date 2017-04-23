@@ -1,17 +1,19 @@
+# MSS runtime testing with csv file writing
+
 import random
 import csv
 from timeit import default_timer as timer
 from mss_algos import *
 
 
-def runtime(runs, alg_type, n_sizes):
+def runtime(runs, algo_type, n_sizes):
     times = []
     for i in range(len(n_sizes)):
         total = 0
         for j in range(runs):
             numbers = [random.randint(-50, 50) for k in range(n_sizes[i])]
             start = timer()
-            alg_type(numbers)
+            algo_type(numbers)
             end = timer()
             total += end - start
 

@@ -1,4 +1,7 @@
-# algorithm 1
+# MSS algorithm definitions
+
+
+# Algorithm 1: Enumeration
 def algorithm1(array):
     n = len(array)
     sub_low = sub_high = max_sum = 0
@@ -16,7 +19,7 @@ def algorithm1(array):
     return max_sum, array[sub_low:sub_high + 1]
 
 
-# algorithm 2
+# Algorithm 2: Better Enumeration
 def algorithm2(array):
     n = len(array)
     sub_low = sub_high = max_sum = 0
@@ -85,7 +88,8 @@ def d_and_c(array, start, end):
         else:
             return ((suf_sum + pref_sum), suf_start, pref_end)
 
-# algorithm 3
+
+# Algorithm 3: Divide and Conquer, helps with input and output
 def algorithm3(array):
     low = 0
     high = len(array) - 1
@@ -105,8 +109,8 @@ def algorithm4(array):
         if sum < 0:
             idxStart = i + 1
             sum = 0
-        elif sum > max:
+        elif sum >= max:
             idxEnd = i + 1
             max = sum
-            
-    return max, array[idxStart : idxEnd]
+
+    return max, array[idxStart: idxEnd]
