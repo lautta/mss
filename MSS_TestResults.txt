@@ -1,0 +1,124 @@
+Results for Enumeration 
+Input Array: [1, 4, -9, 8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19, -10, -11]
+Max Sum: 34 
+Max Sum Subarray: [8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19] 
+
+Input Array: [2, 9, 8, 6, 5, -11, 9, -11, 7, 5, -1, -8, -3, 7, -2]
+Max Sum: 30 
+Max Sum Subarray: [2, 9, 8, 6, 5] 
+
+Input Array: [10, -11, -1, -9, 33, -45, 23, 24, -1, -7, -8, 19]
+Max Sum: 50 
+Max Sum Subarray: [23, 24, -1, -7, -8, 19] 
+
+Input Array: [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
+Max Sum: 187 
+Max Sum Subarray: [59, 26, -53, 58, 97] 
+
+Input Array: [3, 2, 1, 1, -8, 1, 1, 2, 3]
+Max Sum: 7 
+Max Sum Subarray: [3, 2, 1, 1] 
+
+Input Array: [12, 99, 99, -99, -27, 0, 0, 0, -3, 10]
+Max Sum: 210 
+Max Sum Subarray: [12, 99, 99] 
+
+Input Array: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+Max Sum: 6 
+Max Sum Subarray: [4, -1, 2, 1] 
+
+
+
+Results for Better Enumeration 
+Input Array: [1, 4, -9, 8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19, -10, -11]
+Max Sum: 34 
+Max Sum Subarray: [8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19] 
+
+Input Array: [2, 9, 8, 6, 5, -11, 9, -11, 7, 5, -1, -8, -3, 7, -2]
+Max Sum: 30 
+Max Sum Subarray: [2, 9, 8, 6, 5] 
+
+Input Array: [10, -11, -1, -9, 33, -45, 23, 24, -1, -7, -8, 19]
+Max Sum: 50 
+Max Sum Subarray: [23, 24, -1, -7, -8, 19] 
+
+Input Array: [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
+Max Sum: 187 
+Max Sum Subarray: [59, 26, -53, 58, 97] 
+
+Input Array: [3, 2, 1, 1, -8, 1, 1, 2, 3]
+Max Sum: 7 
+Max Sum Subarray: [3, 2, 1, 1] 
+
+Input Array: [12, 99, 99, -99, -27, 0, 0, 0, -3, 10]
+Max Sum: 210 
+Max Sum Subarray: [12, 99, 99] 
+
+Input Array: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+Max Sum: 6 
+Max Sum Subarray: [4, -1, 2, 1] 
+
+
+
+Results for Divide-And-Conquer 
+Input Array: [1, 4, -9, 8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19, -10, -11]
+Max Sum: 34 
+Max Sum Subarray: [8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19] 
+
+Input Array: [2, 9, 8, 6, 5, -11, 9, -11, 7, 5, -1, -8, -3, 7, -2]
+Max Sum: 30 
+Max Sum Subarray: [2, 9, 8, 6, 5] 
+
+Input Array: [10, -11, -1, -9, 33, -45, 23, 24, -1, -7, -8, 19]
+Max Sum: 50 
+Max Sum Subarray: [23, 24, -1, -7, -8, 19] 
+
+Input Array: [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
+Max Sum: 187 
+Max Sum Subarray: [59, 26, -53, 58, 97] 
+
+Input Array: [3, 2, 1, 1, -8, 1, 1, 2, 3]
+Max Sum: 7 
+Max Sum Subarray: [1, 1, 2, 3] 
+
+Input Array: [12, 99, 99, -99, -27, 0, 0, 0, -3, 10]
+Max Sum: 210 
+Max Sum Subarray: [12, 99, 99] 
+
+Input Array: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+Max Sum: 6 
+Max Sum Subarray: [4, -1, 2, 1] 
+
+
+
+Results for Linear-time 
+Input Array: [1, 4, -9, 8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19, -10, -11]
+Max Sum: 34 
+Max Sum Subarray: [8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19] 
+
+Input Array: [2, 9, 8, 6, 5, -11, 9, -11, 7, 5, -1, -8, -3, 7, -2]
+Max Sum: 30 
+Max Sum Subarray: [2, 9, 8, 6, 5] 
+
+Input Array: [10, -11, -1, -9, 33, -45, 23, 24, -1, -7, -8, 19]
+Max Sum: 50 
+Max Sum Subarray: [23, 24, -1, -7, -8, 19] 
+
+Input Array: [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
+Max Sum: 187 
+Max Sum Subarray: [59, 26, -53, 58, 97] 
+
+Input Array: [3, 2, 1, 1, -8, 1, 1, 2, 3]
+Max Sum: 7 
+Max Sum Subarray: [1, 1, 2, 3] 
+
+Input Array: [12, 99, 99, -99, -27, 0, 0, 0, -3, 10]
+Max Sum: 210 
+Max Sum Subarray: [12, 99, 99] 
+
+Input Array: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+Max Sum: 6 
+Max Sum Subarray: [4, -1, 2, 1] 
+
+
+
